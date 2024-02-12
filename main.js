@@ -11,6 +11,7 @@ let chances = 5;
 let gameOver = false;
 let chanceArea = document.getElementById("chance-area");
 let history=[]; // 유효성 검사를 통과한 숫자들을 저장할 배열.
+let historyArea = document.getElementById("history-area");
 
 playButton.addEventListener("click", play); // 플레이 버튼 클릭 시, play() 함수가 실행될 것임.
 resetButton.addEventListener("click", reset);
@@ -36,6 +37,7 @@ function play() {
     // 유효성 검사 이후.
     chances--;
     chanceArea.textContent = `남은 기회 : ${chances}번`;
+    historyArea.textContent = `현재까지 입력된 숫자들 - ${history}`;
     console.log("기회 : ", chances);
 
     if(userValue < computerNum){
@@ -67,6 +69,8 @@ function reset() {
     chances = 5;
     playButton.disabled = false;
     chanceArea.textContent = "남은 기회 : 5번";
+    history = [];
+    historyArea.textContent = "현재까지 입력된 숫자들 - ";
 }
 
 pickRandomNum();

@@ -1,0 +1,65 @@
+* {
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+body {
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    background-image: url(image/back.jpeg);
+    font-size: 20pt;
+}
+
+.container {
+    border: 3px solid white;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(252, 247, 246, 0.7);
+}
+
+.border-line {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#play-button {
+    height: 40px;
+    width: 50px;
+    margin-top: 5px;
+    border-radius: 20px;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+#reset-button {
+    height: 40px;
+    width: 50px;
+    margin-top: 5px;
+    border-radius: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#user-input {
+    height: 30px;
+    width: 200px;
+    background-color: white;
+    font-size: 20pt;
+}
+
+input::placeholder {
+    font-size: 1.0em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+#history-area {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
